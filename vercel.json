@@ -9,7 +9,10 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/server/api/handler.py"
+      "dest": "server/api/handler.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": "server"
+  }
 } 
