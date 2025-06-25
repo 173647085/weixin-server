@@ -161,6 +161,13 @@ def test():
     """测试服务器是否正常运行"""
     return "Server is running!"
 
+# Vercel 处理函数
+def handler(request, response):
+    if request.method == "POST":
+        return app(request)
+    elif request.method == "GET":
+        return app(request)
+
 if __name__ == '__main__':
     # 检查必要的环境变量
     if not APPID or not SECRET:
