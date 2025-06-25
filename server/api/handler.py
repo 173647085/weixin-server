@@ -14,6 +14,7 @@ def handler(request):
     """
     Vercel serverless function handler
     """
-    with app.test_client() as test_client:
-        response = test_client.get('/')
-        return response.get_data(as_text=True) 
+    return {
+        'statusCode': 200,
+        'body': 'Hello from Vercel!'
+    } 
