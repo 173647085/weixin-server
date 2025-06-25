@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/index.py",
+      "src": "server/api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/index.py"
+      "dest": "/server/api/index.py"
     }
   ]
 } 
